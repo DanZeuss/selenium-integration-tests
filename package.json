@@ -1,0 +1,28 @@
+{
+  "name": "selenium-integration-tests",
+  "version": "1.0.0",
+  "description": "Contains all packages used to simulate tests using Selenium (webdriver).",
+  "main": "example.js",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanZeuss/selenium-integration-tests.git"
+  },
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "javascript"
+  ],
+  "author": "Daniel Vieira Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanZeuss/selenium-integration-tests/issues"
+  },
+  "homepage": "https://github.com/DanZeuss/selenium-integration-tests#readme"
+}
