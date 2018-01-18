@@ -11,7 +11,7 @@ var webdriver = require('selenium-webdriver');
   (async function example() {
     let driver = new Builder()
       // defines the host of the current HUB
-      .usingServer('http://localhost:4444/wd/hub')
+      .usingServer('http://192.168.1.6:4444/wd/hub')
       // the definition of the browser is done by running the scripts "run-test-*.sh" that loads/exports the variable that defines the 
       // current browser
       .forBrowser()
