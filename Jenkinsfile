@@ -1,11 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('Installing missing packages') {
             steps {
-                sh 'echo "Fail!"; exit 1'
+                sh 'npm install'
             }
         }
+        // stage('Test') {
+        //     steps {
+        //         sh 'echo "Fail!"; exit 1'
+        //     }
+        // }
     }
     post {
         always {
