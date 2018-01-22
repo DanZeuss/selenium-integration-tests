@@ -6,9 +6,13 @@
   "dependencies": {
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
+    "jest-junit": "^3.4.1"
+  },
   "scripts": {
-    "test": "node example.js"
+    "test": "node selenium-tests.js"
   },
   "repository": {
     "type": "git",
