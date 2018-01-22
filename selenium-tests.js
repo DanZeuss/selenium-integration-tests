@@ -22,7 +22,7 @@ var webdriver = require('selenium-webdriver');
       await browser.findElement(By.id("btn_signin")).click().then();
       await browser.findElement(By.className("username")).getText().then((userLogged) => {
         console.info(userLogged.includes("Zeuss Admin"))
-        run('echo "Hello world"');
+        run.exec('echo "Hello world"');
       })
       await browser.takeScreenshot().then(
         function(image, err) {
