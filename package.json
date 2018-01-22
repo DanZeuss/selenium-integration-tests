@@ -13,7 +13,7 @@
     "junit-report-builder": "^1.2.0"
   },
   "scripts": {
-    "test": "node selenium-tests.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

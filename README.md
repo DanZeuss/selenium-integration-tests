@@ -1,2 +1,2 @@
 # selenium-integration-tests
-Implementing few tests using Selenium Grid (Hub and Nodes) for FireFox, Chrome and Windows
+Tests using Jest integrated with Selenium, reporting JUnit results to be interpreted by Jenkins

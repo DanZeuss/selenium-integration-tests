@@ -11,34 +11,14 @@ var webdriver = require('selenium-webdriver');
       .build();
 
     try {
-      await browser.get('https://troy.zeuss.com/');
+      await browser.get('https://facebook.com');
       await browser.getTitle().then(title => {
         console.log(title);
       });
 
-      await browser.findElement(By.id("username")).sendKeys("zeuss_admin");
-      await browser.findElement(By.id("password")).sendKeys("zeuss_admin");
-      await browser.findElement(By.id("btn_signin")).click().then();
-      await browser.findElement(By.className("username")).getText().then((userLogged) => {
-        console.info(userLogged.includes("Zeuss Admin"))
-        var builder = require('junit-report-builder');
-
-        // Create a test suite
-        var suite = builder.testSuite().name('My suite');
-        
-        // Create a test case
-        var testCase = suite.testCase()
-          .className('my.test.Class')
-          .name('My first test');
-        
-        // Create another test case which is marked as failed
-        // var testCase = suite.testCase()
-        //   .className('my.test.Class')
-        //   .name('My second test')
-        //   .failure();
-        
-        builder.writeTo('test-report.xml');        
-      })
+      await browser.findElement(By.id("email")).sendKeys("youremail");
+      await browser.findElement(By.id("pass")).sendKeys("password");
+      await browser.findElement(By.id("loginbutton")).click().then();
       await browser.takeScreenshot().then(
         function(image, err) {
             require('fs').writeFile('out.png', image, 'base64', function(err) {
