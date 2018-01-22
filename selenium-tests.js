@@ -1,6 +1,7 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
 var webdriver = require('selenium-webdriver');
- 
+ var run = require('child_process');
+
   (async function LogonTest() {
     let browser = new Builder()
       // defines the host of the current HUB
@@ -21,6 +22,7 @@ var webdriver = require('selenium-webdriver');
       await browser.findElement(By.id("btn_signin")).click().then();
       await browser.findElement(By.className("username")).getText().then((userLogged) => {
         console.info(userLogged.includes("Zeuss Admin"))
+        run('echo "Hello world"');
       })
       await browser.takeScreenshot().then(
         function(image, err) {
@@ -31,6 +33,7 @@ var webdriver = require('selenium-webdriver');
     );
     
     } finally {
+      console.log
       await browser.quit();
     }
   })();
