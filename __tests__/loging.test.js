@@ -13,8 +13,8 @@ test('Testing logon on Troy', async () => {
     try {
         await browser.get('https://troy.zeuss.com');
 
-        await browser.findElement(By.id("username")).sendKeys(process.env.ZEUSS_USER_NAME);
-        await browser.findElement(By.id("password")).sendKeys(process.env.ZEUSS_USER_PWD);
+        await browser.findElement(By.id("username")).sendKeys("zeuss_admin");
+        await browser.findElement(By.id("password")).sendKeys("zeuss_admin");
         await browser.findElement(By.id("btn_signin")).click().then();
         
         var userName = await browser.findElement(By.className("username")).getText();
