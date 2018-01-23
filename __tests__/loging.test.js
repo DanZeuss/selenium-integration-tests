@@ -1,4 +1,6 @@
+require('dotenv').config()
 jest.setTimeout(100000000);
+
 test('Testing logon on Troy', async () => {
 
     const {Builder, By, Key, until} = require('selenium-webdriver');
@@ -8,7 +10,7 @@ test('Testing logon on Troy', async () => {
         .usingServer('http://192.168.1.6:4444/wd/hub')
         // the definition of the browser is done by running the scripts "run-test-*.sh" that loads/exports the variable that defines the 
         // current browser
-        .forBrowser()
+        .forBrowser(process.env.SELENIUM_BROWSER)
         .build();
     try {
         await browser.get('https://troy.zeuss.com');

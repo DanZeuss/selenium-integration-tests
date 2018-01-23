@@ -4,6 +4,7 @@
   "description": "Contains all packages used to simulate tests using Selenium (webdriver).",
   "main": "example.js",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
